@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="A300-600ST-jsbsim-cnf.xml"> -->
+<PropertyList include="A300-600ST-yasim-cnf.xml">
+
+  <sim>
+
+    <description>Airbus A300-600ST Beluga</description>
+    <author>Pierre Duval</author>
+
+    <rating>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 3 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>
+

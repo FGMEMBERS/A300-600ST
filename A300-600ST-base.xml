@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <author>Pierre Duval (3D)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/A300-600ST/A300-600ST-splash.png</splash-texture>
+    </startup>
+	
+	<model>
+      <path>Aircraft/A300-600ST/Models/A300-600ST.xml</path>	
+    </model>
+	
+    <sound>
+      <path>Aircraft/A300-600ST/Sounds/A300-600ST-sound.xml</path>
+    </sound>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
+        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3" alias="/smoke/colors/knob-red">1</float>                      <!-- 3 smoke mixer red setting -->
+        <float n="4" alias="/smoke/colors/knob-green">1</float>                    <!-- 4 smoke mixer green setting -->
+        <float n="5" alias="/smoke/colors/knob-blue">1</float>                     <!-- 5 smoke mixer blue setting -->
+        <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>A300-600ST</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open/Close weapons bay door</desc>
+      </key>>
+      <key>
+        <name>Ctrl-b</name>
+	<desc>Slats Extend/Retract</desc>
+      </key>
+      <key>
+        <name>f</name>
+        <desc>Filters Extend/Retract</desc>
+      </key>
+	  <key>
+        <name>j/k</name>
+        <desc>decrease/increase spoilers</desc>
+      </key>
+      <key>
+        <name>Delete</name>
+        <desc>toggle thrust reversers</desc>
+      </key>	  
+    </help>
+
+    <menubar include="Dialogs/A300-600ST-menu.xml"/>
+
+  </sim>
+
+  <engines>
+    <engine n="0">
+      <fuel-flow-pph type="float">0.0</fuel-flow-pph>
+      <n1-actual type="float">0.0</n1-actual>
+      <n2-actual type="float">0.0</n2-actual>
+      <state type="int">0</state>
+      <rpm>1000</rpm>
+      <reverser-position type="double">0.000000</reverser-position>
+      <engine-num type="int">0</engine-num>
+      <rpm>500</rpm>
+      <running>false</running>
+    </engine>
+    <engine n="1">
+      <fuel-flow-pph type="float">0.0</fuel-flow-pph>
+      <n1-actual type="float">0.0</n1-actual>
+      <n2-actual type="float">0.0</n2-actual>
+      <state type="int">0</state>
+      <rpm>1000</rpm>
+      <reverser-position type="double">0.000000</reverser-position>
+      <engine-num type="int">1</engine-num>
+      <rpm>500</rpm>
+      <running>false</running>
+    </engine>
+  </engines>
+
+  <surface-positions>
+    <wing-fold-pos-norm alias="/instrumentation/doors/wings/position-norm" />
+  </surface-positions>
+  
+  <input>
+    <keyboard include="Nasal/A300-600ST-keyboard.xml"/>
+  </input>
+  
+  <instrumentation>
+    <wxradar>
+      <serviceable>true</serviceable>
+      <range type="int" archive="y">20</range>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch archive="y">on</switch>
+      <mode archive="y">wx</mode>
+      <lightning type="bool" archive="y">true</lightning>
+      <display-mode archive="y">arc</display-mode>
+    </wxradar>
+    <radar>
+      <range type="int" archive="y">20</range>
+    </radar>
+  </instrumentation>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/A300-600ST/Nasal/doors.nas</file>
+    </doors>
+    <beluga>
+      <file>Aircraft/A300-600ST/Nasal/light.nas</file>
+      <file>Aircraft/A300-600ST/Nasal/liveries.nas</file>
+    </beluga>
+    <reversethrust>
+      <file>Aircraft/A300-600ST/Nasal/reverse-thrust.nas</file>
+    </reversethrust>
+  </nasal>
+
+</PropertyList>
+

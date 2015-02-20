@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+Airbus A300-600 Super Transporter_Beluga
+Septembre 2011 Pierre Duval
+************************************************************************
+-->
+
+<PropertyList include="A300-600ST-base.xml">
+
+  <sim>
+
+    <description>Airbus A300-600ST Beluga (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>A300-600ST-yasim</aero>
+
+  </sim>
+    
+</PropertyList>

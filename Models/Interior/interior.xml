@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- FLIGHTDEK -->
+  <model>
+    <path>Aircraft/A300-600ST/Models/Interior/FlightDeck/flightdeck.xml</path>
+    <offsets>
+      <x-m> -20.568 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>   1.320 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Main Cargo Bay Door INT -->
+  <animation>
+    <type>rotate</type>
+    <object-name>CargoDoorMainINT</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
+      <entry><ind> 0.1 </ind><dep>  0.00 </dep></entry>
+      <entry><ind> 0.8 </ind><dep> 64.95 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -13.661 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  10.430 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
+
